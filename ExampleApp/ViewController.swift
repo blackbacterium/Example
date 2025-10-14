@@ -13,8 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .green
         updateNumbers()
     }
+    
     private func updateNumbers() {
         helper.addNumber(Int.random(in: 1...10))
         
