@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     private let helper = Helper()
     private let textLabel = UILabel()
     private let imageView = UIImageView()
+    private let imageContainerView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,10 @@ class ViewController: UIViewController {
         setupLabel()
         setupImageView()
         setupView()
+        setupImageContainerView()
         view.addSubview(textLabel)
-        view.addSubview(imageView)
+//        view.addSubview(imageView)
+        view.addSubview(imageContainerView)
     }
     
     private func updateNumbers() {
@@ -43,10 +46,18 @@ class ViewController: UIViewController {
     private func setupImageView() {
         imageView.image = UIImage(named: "Лиса")
         imageView.frame = CGRect(x: 30, y: 130, width: 100, height: 200)
-        imageView.layer.shadowColor = UIColor.black.cgColor
-        imageView.layer.shadowOffset = CGSize(width: 15, height: 15)
-        imageView.layer.shadowOpacity = 1
-        imageView.layer.shadowRadius = 10
+        imageView.layer.cornerRadius = 20
+        imageView.clipsToBounds = true
+    }
+    
+    private func setupImageContainerView() {
+        imageContainerView.frame = imageView.bounds
+        imageContainerView.layer.shadowColor = UIColor.black.cgColor
+        imageContainerView.layer.shadowOffset = CGSize(width: 15, height: 15)
+        imageContainerView.layer.shadowOpacity = 1
+        imageContainerView.layer.shadowRadius = 10
+        
+        imageContainerView.addSubview(imageView)
     }
     
     private func setupView() {
