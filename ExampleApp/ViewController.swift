@@ -21,11 +21,11 @@ class ViewController: UIViewController {
         
         setupLabel()
         setupImageView()
-        setupView()
         setupImageContainerView()
+        setupView()
         view.addSubview(textLabel)
-//        view.addSubview(imageView)
         view.addSubview(imageContainerView)
+        setupLayout()
     }
     
     private func updateNumbers() {
@@ -35,23 +35,21 @@ class ViewController: UIViewController {
             print(number)
         }
     }
+    
     private func setupLabel() {
         let firstNumber = helper.getNumbers().first
         textLabel.text = firstNumber?.formatted()
         textLabel.font = .systemFont(ofSize: 30, weight: .bold)
         textLabel.textColor = .red
-        textLabel.frame = CGRect(x: 30, y: 30, width: 100, height: 50)
     }
     
     private func setupImageView() {
         imageView.image = UIImage(named: "Лиса")
-        imageView.frame = CGRect(x: 30, y: 130, width: 100, height: 200)
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
     }
     
     private func setupImageContainerView() {
-        imageContainerView.frame = imageView.bounds
         imageContainerView.layer.shadowColor = UIColor.black.cgColor
         imageContainerView.layer.shadowOffset = CGSize(width: 15, height: 15)
         imageContainerView.layer.shadowOpacity = 1
@@ -69,5 +67,26 @@ class ViewController: UIViewController {
         
         view.layer.insertSublayer(gradient, at: 0)
     }
+    
+    private func setupLayout() {
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        
+        NSLayoutConstraint.activate([
+            textLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            textLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            imageContainerView.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 150),
+            imageContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            imageContainerView.heightAnchor.constraint(equalToConstant: 200),
+            imageContainerView.widthAnchor.constraint(equalToConstant: 200),
+            
+            imageView.topAnchor.constraint(equalTo: imageContainerView.topAnchor),
+            imageView.leftAnchor.constraint(equalTo: imageContainerView.leftAnchor),
+            imageView.rightAnchor.constraint(equalTo: imageContainerView.rightAnchor),
+            imageView.bottomAnchor.constraint(equalTo: imageContainerView.bottomAnchor)
+        ])
+    }
 }
-
