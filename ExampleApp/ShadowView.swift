@@ -17,6 +17,12 @@ class ShadowView: UIView {
         setupLayout()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        let shadowPath = UIBezierPath(rect: bounds)
+        layer.shadowPath = shadowPath.cgPath
+    }
+    
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)
 //        setupView()
