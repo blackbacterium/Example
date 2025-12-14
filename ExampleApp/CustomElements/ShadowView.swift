@@ -17,6 +17,11 @@ class ShadowView: UIView {
         setupLayout()
     }
     
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         let shadowPath = UIBezierPath(rect: bounds)
@@ -30,9 +35,8 @@ class ShadowView: UIView {
 //        setupLayout()
 //    }
     
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func updateImage(_ imageName: String) {
+        imageView.image = UIImage(named: imageName)
     }
     
     private func setupImageView(_ imageName: String) {

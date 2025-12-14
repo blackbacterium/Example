@@ -6,30 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		591BB2822EEEF1BA0002DFF8 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB2722EEEF1BA0002DFF8 /* ShadowView.swift */; };
+		591BB2832EEEF1BA0002DFF8 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB2742EEEF1BA0002DFF8 /* UIView+Gradient.swift */; };
+		591BB2842EEEF1BA0002DFF8 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB27B2EEEF1BA0002DFF8 /* Helper.swift */; };
+		591BB2852EEEF1BA0002DFF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB27D2EEEF1BA0002DFF8 /* ViewController.swift */; };
+		591BB2862EEEF1BA0002DFF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB27F2EEEF1BA0002DFF8 /* AppDelegate.swift */; };
+		591BB2872EEEF1BA0002DFF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB2802EEEF1BA0002DFF8 /* SceneDelegate.swift */; };
+		591BB2882EEEF1BA0002DFF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 591BB2762EEEF1BA0002DFF8 /* Assets.xcassets */; };
+		591BB28A2EEEF1BA0002DFF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 591BB2792EEEF1BA0002DFF8 /* LaunchScreen.storyboard */; };
+		591BB3002EEEF97D0002DFF8 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591BB2FF2EEEF97D0002DFF8 /* CustomButton.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		591BB2722EEEF1BA0002DFF8 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		591BB2742EEEF1BA0002DFF8 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		591BB2762EEEF1BA0002DFF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		591BB2772EEEF1BA0002DFF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		591BB2782EEEF1BA0002DFF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		591BB27B2EEEF1BA0002DFF8 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		591BB27D2EEEF1BA0002DFF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		591BB27F2EEEF1BA0002DFF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		591BB2802EEEF1BA0002DFF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		591BB2FF2EEEF97D0002DFF8 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		59FD9B482E9191C2006827AE /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		59FD9B5A2E9191C4006827AE /* Exceptions for "ExampleApp" folder in "ExampleApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Resources/Info.plist,
-			);
-			target = 59FD9B472E9191C2006827AE /* ExampleApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		59FD9B4A2E9191C2006827AE /* ExampleApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				59FD9B5A2E9191C4006827AE /* Exceptions for "ExampleApp" folder in "ExampleApp" target */,
-			);
-			path = ExampleApp;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		59FD9B452E9191C2006827AE /* Frameworks */ = {
@@ -42,10 +43,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		591BB2732EEEF1BA0002DFF8 /* CustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				591BB2722EEEF1BA0002DFF8 /* ShadowView.swift */,
+				591BB2FF2EEEF97D0002DFF8 /* CustomButton.swift */,
+			);
+			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		591BB2752EEEF1BA0002DFF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				591BB2742EEEF1BA0002DFF8 /* UIView+Gradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		591BB27A2EEEF1BA0002DFF8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				591BB2762EEEF1BA0002DFF8 /* Assets.xcassets */,
+				591BB2772EEEF1BA0002DFF8 /* Info.plist */,
+				591BB2792EEEF1BA0002DFF8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		591BB27C2EEEF1BA0002DFF8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				591BB27B2EEEF1BA0002DFF8 /* Helper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		591BB27E2EEEF1BA0002DFF8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				591BB27D2EEEF1BA0002DFF8 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		591BB2812EEEF1BA0002DFF8 /* ExampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				591BB2752EEEF1BA0002DFF8 /* Extensions */,
+				591BB2732EEEF1BA0002DFF8 /* CustomElements */,
+				591BB27A2EEEF1BA0002DFF8 /* Resources */,
+				591BB27C2EEEF1BA0002DFF8 /* Services */,
+				591BB27E2EEEF1BA0002DFF8 /* ViewControllers */,
+				591BB27F2EEEF1BA0002DFF8 /* AppDelegate.swift */,
+				591BB2802EEEF1BA0002DFF8 /* SceneDelegate.swift */,
+			);
+			path = ExampleApp;
+			sourceTree = "<group>";
+		};
 		59FD9B3F2E9191C2006827AE = {
 			isa = PBXGroup;
 			children = (
-				59FD9B4A2E9191C2006827AE /* ExampleApp */,
+				591BB2812EEEF1BA0002DFF8 /* ExampleApp */,
 				59FD9B492E9191C2006827AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,9 +130,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				59FD9B4A2E9191C2006827AE /* ExampleApp */,
 			);
 			name = ExampleApp;
 			packageProductDependencies = (
@@ -122,6 +177,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591BB2882EEEF1BA0002DFF8 /* Assets.xcassets in Resources */,
+				591BB28A2EEEF1BA0002DFF8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +189,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				591BB2822EEEF1BA0002DFF8 /* ShadowView.swift in Sources */,
+				591BB2832EEEF1BA0002DFF8 /* UIView+Gradient.swift in Sources */,
+				591BB2842EEEF1BA0002DFF8 /* Helper.swift in Sources */,
+				591BB2852EEEF1BA0002DFF8 /* ViewController.swift in Sources */,
+				591BB3002EEEF97D0002DFF8 /* CustomButton.swift in Sources */,
+				591BB2862EEEF1BA0002DFF8 /* AppDelegate.swift in Sources */,
+				591BB2872EEEF1BA0002DFF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		591BB2792EEEF1BA0002DFF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				591BB2782EEEF1BA0002DFF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		59FD9B5C2E9191C4006827AE /* Debug */ = {
