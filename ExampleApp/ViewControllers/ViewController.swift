@@ -9,14 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let helper = Helper()
-    
     private let textLabel = UILabel()
     private let shadowView = ShadowView(imageName: ShadowViewType.fox.rawValue)
-//    private let secondShadowView = ShadowView(imageName: ShadowViewType.custom.rawValue)
     private let stackView = UIStackView()
     private let numberButton = CustomButton(textButton: "Change number", bgColor: .systemRed)
     private let imageButton = CustomButton(textButton: "Change image", bgColor: .systemGreen)
+    
+    var helper: NumberManageable?
     
     private var randomNumber: Int {
         Int.random(in: 1...10)
@@ -24,12 +23,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .green
         updateNumbers()
         view.addGradient()
         
         setupLabel()
-//        setupView()
         setupStackView()
         view.addSubview(stackView)
         addAction()
@@ -38,14 +35,14 @@ class ViewController: UIViewController {
     }
     
     private func updateNumbers() {
-        helper.addNumber(randomNumber)
-        helper.addNumber(randomNumber)
-        helper.addNumber(randomNumber)
+        helper?.addNumber(randomNumber)
+        helper?.addNumber(randomNumber)
+        helper?.addNumber(randomNumber)
     }
     
     @objc
     private func numberButtonTapped() {
-        textLabel.text = helper.getRandomNumber().formatted()
+        textLabel.text = helper?.getRandomNumber().formatted()
     }
 }
 
@@ -88,28 +85,17 @@ private extension ViewController {
         
         stackView.addArrangedSubview(textLabel)
         stackView.addArrangedSubview(shadowView)
-//        stackView.addArrangedSubview(secondShadowView)
         stackView.addArrangedSubview(numberButton)
         stackView.addArrangedSubview(imageButton)
     }
     
     func setupLabel() {
-        let firstNumber = helper.getNumbers().first
+        let firstNumber = helper?.getNumbers().first
         textLabel.text = firstNumber?.formatted()
         textLabel.font = .systemFont(ofSize: Constant.font30, weight: .bold)
         textLabel.textAlignment = .center
         textLabel.textColor = .red
     }
-    
-//    func setupView() {
-//        let gradient = CAGradientLayer()
-//        gradient.frame = view.bounds
-//        gradient.colors = [UIColor.green.cgColor, UIColor.blue.cgColor]
-//        gradient.startPoint = CGPoint(x: 0, y: 0)
-//        gradient.endPoint = CGPoint(x: 1, y: 1)
-//        
-//        view.layer.insertSublayer(gradient, at: 0)
-//    }
 }
 
 //MARK: - Setup Layout

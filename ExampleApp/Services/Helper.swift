@@ -7,18 +7,40 @@
 
 import Foundation
 
-class Helper {
-    private var numbers: [Int] = [] // 1
+protocol NumberManageable {
+    func addNumber(_ number: Int)
+    func getNumbers() -> [Int]
+    func getRandomNumber() -> Int
+}
 
-    func addNumber(_ number: Int) { // 2
+class Helper: NumberManageable {
+    private var numbers: [Int] = []
+
+    func addNumber(_ number: Int) {
         numbers.append(number)
     }
     
-    func getNumbers() -> [Int] { // 3
+    func getNumbers() -> [Int] {
         numbers
     }
     
     func getRandomNumber() -> Int {
         numbers.randomElement() ?? 0
     }
+}
+
+class NewHelper: NumberManageable {
+    func addNumber(_ number: Int) {
+        print("add \(number) in array")
+    }
+    
+    func getNumbers() -> [Int] {
+        []
+    }
+    
+    func getRandomNumber() -> Int {
+        0
+    }
+    
+    
 }
